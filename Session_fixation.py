@@ -18,7 +18,7 @@ def main():
   
 
     if Session(input_a, input_b, input_c):
-        print(f"{Fore.RED}Vulnerable to Session fixation! Report Kar lodu")
+        print(f"{Fore.RED}Vulnerable to Session fixation!")
 	
     else:
         print(f"{Fore.GREEN}No Match .")
