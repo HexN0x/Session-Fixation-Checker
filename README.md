@@ -2,11 +2,13 @@
 The Session-Fixation-Checker is a tool designed to test for session fixation vulnerabilities in web applications. Session fixation is a type of security flaw where an attacker can fixate a session ID before the user logs in, and if the session ID remains unchanged after login, the attacker can hijack the session.
 
 How the Session-Fixation-Checker Works:
-Before Login: The tool captures the session ID provided by the server before the user logs in.
+  Before Login: User enters the session ID from their browser before logging in.
 
-After Login: The tool checks the session ID again after the user successfully logs in.
+  After Login: User logs in and enters the new session ID. The tool checks if the session ID changed.
 
-After Logout: The tool verifies the session ID after the user logs out.
+  After Logout: User logs out and enters the session ID again. The tool verifies if the session ID changed.
+
+<img width="841" alt="image" src="https://github.com/user-attachments/assets/df574dd8-ee9f-4369-8407-a63915bea218">
 
 Vulnerability Detection:
 If the session ID does not change between these stages (especially between "Before Login" and "After Login"), the tool identifies a session fixation vulnerability.
